@@ -46,15 +46,13 @@ export function Grafik({sensor} : {sensor: valueSensor[]}) {
     
         <CartesianGrid vertical={false} />
         <XAxis
-            dataKey="no"
-            tickLine={false}
-            tickMargin={10}
-            axisLine={false}
-            tickFormatter={(value) => value.slice(0, 3)}
-        />
-        <YAxis
             dataKey="value"
+            // tickLine={false}
+            // tickMargin={10}
+            // axisLine={false}
+            // tickFormatter={(value) => value.slice(0, 3)}
         />
+        <YAxis domain={[0, 30]} tick={{ fontSize: 12 }} />
         <ChartTooltip content={<ChartTooltipContent labelKey="value"/>} />
         <Bar dataKey="value" barSize={80} radius={[8, 8, 0, 0]} opacity={1} fill="#000"  />
       </ComposedChart>
