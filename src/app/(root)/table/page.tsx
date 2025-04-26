@@ -1,11 +1,10 @@
 import { createClient } from "@/app/utils/supabase/server";
 import MyTable from "@/components/mytable";
-import {TotalData} from "@/components/mytable";
 import { Card } from "@/components/ui/card";
 
 export default async function Page() {
     const supabase = await createClient();
-    const { data,count } = await supabase.from("status_sensor").select('*', { count: 'exact', head: false })
+    const { data } = await supabase.from("status_sensor").select('*', { count: 'exact', head: false })
     .order('id', { ascending: false })
     .limit(8);
   return (
