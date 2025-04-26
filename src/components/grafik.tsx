@@ -56,7 +56,7 @@ export function Grafik({sensor} : {sensor: valueSensor[]}) {
             dataKey="value"
         />
         <ChartTooltip content={<ChartTooltipContent labelKey="value"/>} />
-        <Bar dataKey="value" barSize={80} radius={[8, 8, 0, 0]} opacity={1} fill="#fff"  />
+        <Bar dataKey="value" barSize={80} radius={[8, 8, 0, 0]} opacity={1} fill="#000"  />
       </ComposedChart>
     </ChartContainer>
   )
