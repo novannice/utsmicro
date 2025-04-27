@@ -1,14 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { TrendingUp } from "lucide-react"
-import { Label, Pie, PieChart } from "recharts"
+import {  Pie, PieChart } from "recharts"
 
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -60,9 +58,6 @@ const chartConfig = {
 
 export function MyPieChart({data} : {data:status_sensor[]}) {
     useRealtimeData("status_sensor");
-  const totalVisitors = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.status, 0)
-  }, [])
 
   data?.map(() => {
     const last10 = data.slice(-10)
