@@ -54,7 +54,7 @@ export function Grafik({sensor} : {sensor: valueSensor[]}) {
         />
         <YAxis domain={[0, 30]} tick={{ fontSize: 12 }} />
         <ChartTooltip content={<ChartTooltipContent labelKey="value"/>} />
-        <Bar dataKey="value" barSize={80} radius={[8, 8, 0, 0]} opacity={1} fill="#000"  />
+        <Bar dataKey="value" barSize={50} radius={[8, 8, 0, 0]} opacity={1} fill="#ff5404"  />
       </ComposedChart>
     </ChartContainer>
   )

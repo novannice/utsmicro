@@ -22,20 +22,24 @@ import {
             <TableCaption>data status sensor.</TableCaption>
             <TableHeader>
                 <TableRow>
-                    {/* <TableHead className="w-[100px]">Id</TableHead> */}
+ <TableHead className="w-[100px]">Id</TableHead>
+ <TableHead className="text-center">Timestamp</TableHead>
                     <TableHead className="text-center">status sensor</TableHead>
-                    {/* <TableHead className="text-center">Timestamp</TableHead> */}
+                    <TableHead className="text-center">status</TableHead>
                 </TableRow>
             </TableHeader>
             <TableBody>
                 {data?.map((item) => (
                     <TableRow key={item.id}>
-                        {/* <TableCell className="font-medium">{item.id}</TableCell> */}
+                    <TableCell className="font-medium">{item.id}</TableCell>
+                    <TableCell className="text-center">{item.timestamp}</TableCell>
+                    <TableCell className="text-center">{item.value}</TableCell>
+
                         <TableCell className={`text-center ${
-    item.value === 1 ? "text-green-600" : item.value === 0 ? "text-red-600" : ""
-  }`}
->{item.value === 0 ? "OFF" : item.value === 1 ? "ON" : item.value}</TableCell>
-                        {/* <TableCell className="text-right">{item.timestamp}</TableCell> */}
+                                item.value === 1 ? "text-green-600" : item.value === 0 ? "text-red-600" : ""
+                            }`}
+                            >{item.value === 0 ? "OFF" : item.value === 1 ? "ON" : item.value}
+                        </TableCell>
                     </TableRow>
                 ))}
             </TableBody>
